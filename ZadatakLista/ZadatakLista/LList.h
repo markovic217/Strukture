@@ -21,5 +21,6 @@ public:
 	bool isInList(int el);
 	void deleteEl(int el);
 	LListNode* removeNodeFromHead();
+	void injectOrRemove(int br);
 };
 

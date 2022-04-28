@@ -172,3 +172,35 @@ LListNode* LList::removeNodeFromHead()
 	head = head->next;
 	return tmp;
 }
+
+void LList::injectOrRemove(int br) {
+	if (isEmpty())
+		return;
+	if (head->info == br) {
+		LListNode* tmp = head;
+		head = head->next;
+		delete tmp;
+		return;
+	}
+	if (head->next->info > br) {
+		addToHead(br);
+		return;
+	}
+	LListNode* node = head;
+	while (node->next != NULL) {
+		if (node->next->info == br) {
+			LListNode* tmp = node->next;
+			node->next = node->next->next;
+			delete tmp;
+			return;
+		}
+		if (node->info < br && node->next->info > br) {
+			LListNode* tmp = new LListNode(br, node->next);
+			node->next = tmp;
+			return;
+		}
+		node = node->next;
+	}
+	LListNode* tmp = new LListNode(br);
+	node->next = tmp;
+}
