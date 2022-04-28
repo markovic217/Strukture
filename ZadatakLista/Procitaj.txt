@@ -1,0 +1,1 @@
+Funkcije su u LList.cpp

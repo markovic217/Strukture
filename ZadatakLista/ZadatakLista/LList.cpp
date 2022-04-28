@@ -173,6 +173,7 @@ LListNode* LList::removeNodeFromHead()
 	return tmp;
 }
 
+//Jun 2
 void LList::injectOrRemove(int br) {
 	if (isEmpty())
 		return;
