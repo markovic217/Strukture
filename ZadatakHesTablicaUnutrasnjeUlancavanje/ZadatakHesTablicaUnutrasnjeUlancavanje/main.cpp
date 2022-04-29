@@ -12,5 +12,5 @@ void main()
 	tablica.insert(o1);
 	tablica.insert(o1);
 	tablica.insert(o2);
-	tablica.print();
+	//tablica.print();
 }

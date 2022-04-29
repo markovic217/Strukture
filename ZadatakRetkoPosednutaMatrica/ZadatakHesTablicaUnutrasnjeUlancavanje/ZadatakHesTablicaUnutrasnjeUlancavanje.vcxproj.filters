@@ -30,13 +30,7 @@
     <ClInclude Include="ChainedScatterTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ChainedScatterTableJun2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SparseMatrix.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ChainedScatterObjectJun2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SparseMatrixCell.h">
@@ -60,9 +54,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ChainedScatterTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ChainedScatterTableJun2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

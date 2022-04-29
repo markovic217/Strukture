@@ -141,18 +141,15 @@
   <ItemGroup>
     <ClInclude Include="ChainedScatterObject.h" />
     <ClInclude Include="ChainedScatterTable.h" />
-    <ClInclude Include="ChainedScatterTableJun2.h" />
     <ClInclude Include="HashObject.h" />
     <ClInclude Include="HashTable.h" />
     <ClInclude Include="ScatterObject.h" />
-    <ClInclude Include="ChainedScatterObjectJun2.h" />
     <ClInclude Include="SparseMatrix.h" />
     <ClInclude Include="SparseMatrixCell.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChainedScatterObject.cpp" />
     <ClCompile Include="ChainedScatterTable.cpp" />
-    <ClCompile Include="ChainedScatterTableJun2.cpp" />
     <ClCompile Include="HashObject.cpp" />
     <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="main.cpp" />

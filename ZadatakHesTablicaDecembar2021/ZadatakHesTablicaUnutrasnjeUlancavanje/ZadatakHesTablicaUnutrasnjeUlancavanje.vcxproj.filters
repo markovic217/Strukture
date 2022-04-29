@@ -24,22 +24,10 @@
     <ClInclude Include="ScatterObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ChainedScatterObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ChainedScatterTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ChainedScatterTableJun2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SparseMatrix.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ChainedScatterObjectJun2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SparseMatrixCell.h">
+    <ClInclude Include="ChainedScatterObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,13 +44,10 @@
     <ClCompile Include="ScatterObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ChainedScatterObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ChainedScatterTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ChainedScatterTableJun2.cpp">
+    <ClCompile Include="ChainedScatterObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

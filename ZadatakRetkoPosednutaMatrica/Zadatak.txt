@@ -1,0 +1,18 @@
+Jun2
+
+Kod hes funkcije, U slucaju da je dimenzija matrice 10x10, hes funkcija treba da vrati ((i + j) * 10) % velicinaTablice;
+ Metod za mnozenje je pitanje kako se mnozi, da li kao obicne matrice ili svaki element sa svakim.
+
+Trazenje elemenata
+ChainedScatterObject ChainedScatterTable::find(char* key, int value)
+{
+	unsigned int probe = h(key);
+	while (probe != -1)
+	{
+		if (!array[probe].isEqualKey(key) && value != array[probe].value)
+			probe = array[probe].next;
+		else
+			return array[probe];
+	}
+	return ChainedScatterObject();
+}

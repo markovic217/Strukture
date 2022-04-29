@@ -8,8 +8,6 @@ protected:
 	ChainedScatterObject* array;
 	unsigned int lrmp;
 public:
-	ChainedScatterTable() {
-	};
 	ChainedScatterTable(unsigned int length);
 	~ChainedScatterTable();
 	void insert(ChainedScatterObject obj);
