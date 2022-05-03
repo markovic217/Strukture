@@ -1,0 +1,33 @@
+// noToDelete moze da predstavlja redni broj elementa ili vrednost elementa. Ovde je verovatno redni broj elementa.
+// 
+
+void deleteFrom(int val, int noToDelete){
+	if(isEmpty())
+	 return;
+	int br = 1;
+	Node* curr = head;
+	Node* tmp = NULL;
+	if(head.info == val){
+	 while(noToDelete != br && curr.next != NULL){
+	  br++;
+	  tmp = curr;
+	  curr = curr.next;
+	  delete tmp;
+	 }
+	 tmp = curr;
+	 head = curr.next;
+	 delete tmp;
+	}
+	else{ 
+	 while(curr.next != NULL && curr.next.info != val){
+	  curr = curr.next;
+	  br++;
+	 }
+	 while(noToDelete != br && curr.next != NULL){
+	  br++;	  
+	  tmp = curr.next;
+	  curr.next = curr.next.next;
+	  delete tmp;
+	 }
+	}
+}
