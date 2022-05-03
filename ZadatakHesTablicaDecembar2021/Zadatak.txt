@@ -1,0 +1,34 @@
+Za hesiranje se mogu koristiti 2 parametra. Jedan je da se hesira pomocu prva 3 slova koja su oznaka robne marke. Na osnovu toga se svaki sinonim nadovezuje na istu robnu marku (tipa puma stvari ce da se hesiraju u isti kljuc pa ce nastati kolizija i bice puno sinonima pa su sve stvari marke puma povezane). Nedostatak je to sto ce biti vise pristupa jer ce biti vise kolizija. U odnosu na to ako se uzmu kao parametri svi znakovi onda ce se napraviti neko rasipanje i bice manje pristupa, ali nece biti ulancavanje sinonima istih marki.
+Ovi artikli imaju atribut kolicina tako da funkcija za azuriranje menja vrednost tog atributa. 
+
+void update(char* key, int kolicina){
+int start = probe = h(key);
+if(array[probe].getKey() != key){
+  while(array[probe].next != -1 && array[probe].getKey() != key){
+	probe = array[probe].next;
+	if(probe == start){
+	cout << "Stavka sa datim kljucem nije u tablici";
+	return;
+	}
+	if(array[probe].getKey()!= key)
+	{
+	cout << "Stavka sa datim kljucem nije u tablici";
+	return;
+	}
+  }
+}
+ if(kolicina > array[probe].kolicina)
+ {
+ cout<< "Nema dovoljno artikala na stanju";
+ array[probe].kolicina = 0;
+ }
+ else{
+ array[probe].kolicina -= kolicina;
+ if(array[probe].kolicina != 0){
+ ChainedScatterObject* pom = array[start];
+ array[start] = array[probe];
+ array[probe] = pom;
+ // Ovde se artikal stavlja na pocetak liste sinonima. Nacin zamene se moze promeniti ako ovo ne radi (Npr samo da se promene vrednosti kljuca, imena artikla i kolicine). Ovo moze da ne radi jer su array[start] i array[probe] pointeri, pa zamenom pointera se mozda nista nece desiti.
+ }
+ }
+}
