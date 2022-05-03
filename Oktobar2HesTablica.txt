@@ -1,0 +1,36 @@
+//Posto se za pribavljanje podataka koriste datum i oznaka dobavljaca, redni broj fakture se nece uzimati u obzir.
+
+unsigned int h(char* key){
+	return f(g(key));
+}
+
+int toNum(char ch){
+	return ch -'0';
+}
+
+unsigned int g(char* key){
+	int dobavljac = key[0] + key[1] + key[2];
+	int godina = toNum(key[3]) * 1000 + toNum(key[4]) * 100 + toNum(key[5]) * 10 + toNum(key[6]);
+	int mesec = toNum(key[7]) * 10 + toNum(key[8]);
+	int dan = toNum(key[9]) * 10 + toNum(key[10]);
+	int res = godina + dobavljac * mesec * dan;
+	return res;
+}
+
+unsigned int f(int key){
+	return key % 15000;
+}
+
+void insert(ChainedHashObject* obj){
+ array[h(obj.getKey())].addToHead(obj);
+ count++;
+}
+
+ChainedHashObject getObject(char* key){
+ ChainedHashObject obj;
+ int i = h(key);
+ obj = array[i].getHeadEl();
+ while(obj.getKey() != key)
+   obj = array[i].getNextEl();
+ return obj;
+}

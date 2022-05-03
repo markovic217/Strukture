@@ -9,7 +9,7 @@ ChainedScatterObject ChainedScatterTable::find(char* key, int value)
 	unsigned int probe = h(key);
 	while (probe != -1)
 	{
-		if (!array[probe].isEqualKey(key) && value != array[probe].value)
+		if (!array[probe].isEqualKey(key))
 			probe = array[probe].next;
 		else
 			return array[probe];
