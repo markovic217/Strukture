@@ -1,0 +1,45 @@
+// Posto skolska uprava je jednog okruga, prve tri cifre OOO se nece ukljucivati u obzir jer su za svakog ucenika iste. Takodje RR (razred) se nece ukljucivati u obzir jer je ovo prijemni ispit pa ce samo poslednji razred da polaze te ce uvek biti isti. Za hesiranje ce se koristiti XXXXXX.
+
+unsigned int h(char* key){
+	return f(g(key));
+}
+
+int toNum(char ch){
+	return ch -'0';
+}
+
+unsigned int g(char* key){
+	int jmbg = 0;
+	int br = 8;
+	for(int i=1; i<= 100000; i*=10)
+	 jmbg += toNum(key[br--]) * i;
+	return jmbg;
+}
+
+unsigned int f(int key){
+	return key % 8000; //8000 je velicina tablice, umseto to se pise m
+}
+
+void delete(char* key){
+ if(count ==0) return;
+ int probe= h(key);
+ int tail; 
+ if(array[probe].getKey() != key)
+ {
+  probe = array[probe].next;
+  while (array[probe].getKey() != key && array[probe].next != -1){
+   tail = probe;
+   probe = array[probe].next;
+  }
+  if(array[probe].getKey() != key){
+   cout << "Ucenik nije u tablici";
+   return; 
+ }
+  else{
+   array[tail].next = array[probe].next;
+   array[probe].deleteRecord();
+   array[probe].status = 1;
+  }
+ }
+ count--;
+}
