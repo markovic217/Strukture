@@ -1,0 +1,19 @@
+void aggregateByValue(int points){
+  if(isEmpty())
+  return;
+  Node* start = head;
+  while(start.info.points != points && head.next != NULL)
+   start = start.next;
+   Node* curr = start.next;
+   while(curr.next!=null)
+   {
+     if(curr.next.info.points == points)
+	  {
+	   Node* tmp = curr.next;
+	   curr.next = tmp.next;
+	   tmp.next = start.next;
+	   start.next = tmp;
+	  }
+   }
+  }
+}

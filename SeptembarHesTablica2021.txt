@@ -1,0 +1,34 @@
+//Ne razumem zadatak
+
+int h(Marker m){
+ return ((m.x+m.y) * 1000) % m //m - velicina prostora za cuvanje originala
+}
+
+void add(Marker* m){
+ if(count == this.m)
+  return;
+ int probe = h(m);
+ if (array[probe].status == 2){
+ while(array[probe].next != -1 && array[probe].status == 2 && array[probe].next != 0)
+	probe = array[probe].next;
+ if(probe == 0)
+ return; // prostor za sinonime je pun;
+ array[probe].next = lrmp;
+ probe = lrmp;
+ lrmp = array[probe].next;
+ }
+ array[probe] = obj;
+ array[probe].status = 2;
+ array[probe].next = -1;
+ count++;
+}
+
+Marker find(Marker* m){
+ int probe = h(m);
+ while(!array[probe].IsEqualKey(m) && probe != -1)
+  probe = array[probe].next;
+ if(array[probe].IsEqualKey(m))
+  return array[probe];
+ else
+  return Marker();
+}
