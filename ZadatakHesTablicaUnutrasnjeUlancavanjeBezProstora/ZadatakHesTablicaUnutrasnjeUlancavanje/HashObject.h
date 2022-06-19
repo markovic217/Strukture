@@ -17,6 +17,10 @@ public:
 	void deleteKey();
 	char* getKey() { return key; }
 	char* getRecord() { return record; }
+	void setRecord(char* r) {
+		record = new char[strlen(r) + 1];
+		strcpy(record, r);
+	}
 	bool isEqualKey(char* k) { return strcmp(key,k)==0; }
 	void print();
 };
